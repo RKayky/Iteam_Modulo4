@@ -1,22 +1,23 @@
-import BemVindo from './components/BemVindo'
+import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import './App.css'
+import BemVindo from './components/BemVindo'
+import SecaoHabitos from './components/SecaoHabitos'
+import HabitList from './components/HabitList'
 
-function App(){
-  return(
-    <div>
-      <Header
-        titulo={"My Daily Habits"}
-        descricao={"Gerêncie seus hábitos de forma simples e visual"}
-
-      />
-      <BemVindo nomeUsuario={"Ryan Kayky"} totalHabitos={0}> </ BemVindo>     
-      <Footer/>
-      
-    </div>
-
-
+function App() {
+  return (
+    <>
+      <Header />
+      <main>
+        <BemVindo nomeUsuario="Ryan!" />
+        <SecaoHabitos titulo="Meus Hábitos">
+          <HabitList />
+        </SecaoHabitos>
+      </main>
+      <Footer />
+    </>
   )
 }
+
 export default App

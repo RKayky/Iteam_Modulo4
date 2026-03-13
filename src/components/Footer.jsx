@@ -1,9 +1,9 @@
-function Footer(){
-    return(
-        <footer>
-            <small>Módulo 04 - Desenvolvimento Front-end com React - ITEAM</small>
-        </footer>
-    )
+function Footer() {
+  return (
+    <footer>
+      <p>My Daily Habits &copy; 2026</p>
+    </footer>
+  )
 }
 
 export default Footer

@@ -1,10 +1,9 @@
-function Header({ titulo, descricao, subtitulo}) {
-    return(
-        <div>
-            <h1> {titulo} </h1>
-            <h2> {subtitulo} </h2>
-            <p>{descricao}</p>
-        </div>
-    )
+function Header() {
+  return (
+    <header>
+      <h1>My Daily Habits</h1>
+    </header>
+  )
 }
+
 export default Header
