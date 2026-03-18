@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import HabitCard from './HabitCard'
 
 function HabitList() {
@@ -11,6 +11,15 @@ function HabitList() {
   const [novoNome, setNovoNome] = useState('')
   const [novaDescricao, setNovaDescricao] = useState('')
   const [novaCategoria, setNovaCategoria] = useState('')
+
+  useEffect(() => {
+    console.log('Habitlist montou')
+  }, [])
+  
+  useEffect(() => {
+    localStorage.setItem('my-daily-habits', JSON.stringify(habits))
+    console.log('Hábitos salvos:', habits.length)
+  }, [habits])
 
   const removerHabit = (id) => {
     setHabits((currentHabits) => currentHabits.filter((habit) => habit.id !== id))

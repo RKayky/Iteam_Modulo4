@@ -13,11 +13,14 @@ function HabitCard({ nome, descricao = '', meta, ativo = true, diasFeitos = 0, o
       <span>{ativo ? 'Ativo' : 'Pausado'}</span>
       {metaAtingida && <p>Parabéns! Meta da semana atingida!</p>}
 
+    <div className="buttonFlex">
       {onRemover && (
         <button type="button" onClick={onRemover}>
           Remover
         </button>
       )}
+    </div>
+
     </div>
   )
 }
